@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Cabecalho from './components/Cabecalho';
+import Rodape from './components/Rodape';
+import ListaDeTasks from './components/ListaDeTasks';
+import { useState } from 'react';
 
 function App() {
+
+  const [arrTask, setArrTask] = useState([]);
+
+  const addTask = (nome) => {
+    setArrTask((prev) => [...prev, nome]);
+  };
+
+  const apagar = (task) => {
+    setArrTask(arrTask.filter((el) =>  el !== task));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Cabecalho enviandoTask ={addTask}/>
+      <ListaDeTasks
+        todasTasks ={arrTask}
+        apagarTask ={apagar}
+      />
+      <Rodape />
     </div>
   );
 }

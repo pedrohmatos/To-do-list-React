@@ -1,0 +1,20 @@
+.lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    margin: 32px auto;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.lista::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 5px;
+    background-color: #f8f8f8d8;
+}
+
+.lista::-webkit-scrollbar-thumb {
+    background-color: #0b1323ec;
+    border-radius: 5px;
+}

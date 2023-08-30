@@ -1,0 +1,46 @@
+.cabecalhoDaPagina {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.cabecalhoDaPagina h1 {
+    color: #f8f8f8;
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.cabecalhoDaPagina form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.cabecalhoDaPagina form input {
+    background-color: #0b1323;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px;
+    padding: 10px 32px;
+    color: #f8f8f8;
+    outline: none;
+}
+
+.cabecalhoDaPagina form input::placeholder {
+    color: #f8f8f8d8;
+}
+
+@media screen and (max-width: 530px){
+    .cabecalhoDaPagina h1 {
+        transition: 0.4s ease-in-out;
+        font-size: 40px;
+    }
+
+    .cabecalhoDaPagina form input {
+        transition: 0.4s ease-in-out;
+        font-size: 14px;
+        padding: 10px 20px;
+        margin: 0px 5px;
+    }
+}
