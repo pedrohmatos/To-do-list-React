@@ -4,7 +4,7 @@ import { AiFillGithub } from 'react-icons/ai';
 const Rodape = () => {
     return (
     <p className='rodape'>
-        <a href="https://github.com/pedrohmatos" target='_blank'>
+        <a href="https://github.com/pedrohmatos" target='_blank' rel='author'>
             Desenvolvido por Pedro Matos <AiFillGithub size={ 20 }/>
         </a>
     </p>
