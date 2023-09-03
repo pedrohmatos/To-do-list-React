@@ -1,0 +1,21 @@
+.listaDeTask {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.listaDeTask::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 5px;
+    background-color: #f8f8f8d8;
+}
+
+.listaDeTask::-webkit-scrollbar-thumb {
+    background-color: #0077ffb7;
+    border-radius: 5px;
+}

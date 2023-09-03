@@ -1,25 +1,50 @@
 h1 {
-    color: #eee;
+    color: #f8f8f8;
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .adicionarTask {
-    margin: 15px 0px;
+    margin: 15px auto;
     width: 100%;
     display: flex;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .adicionarTask input {
     height: 40px;
-    padding: 0px 10px;
+    padding: 10px 16px;
     border-radius: 5px;
     border: none;
     flex: 2;
-    background-color: #444;
-    color: #eee;
-    font-size: 16px;
+    background-color: #717a8b;
+    color: #f8f8f8;
+    font-size: 20px;
+}
+
+.adicionarTask input::placeholder {
+    color: #f8f8f8;
 }
 
 .botaoAdicionar {
-    margin-left: 10px;
+    margin-left: 16px;
     flex: 1;
+}
+
+@media screen and (max-width: 530px){
+    h1 {
+        transition: 0.5s ease-in-out;
+        font-size: 50px;
+    }
+
+    .adicionarTask {
+        width: 80%;
+    }
+
+    .adicionarTask input {
+        font-size: 16px;
+    }
 }

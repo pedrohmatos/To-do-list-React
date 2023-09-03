@@ -6,7 +6,7 @@ const Task = ( {descricao, completarTarefa, apagarTarefa} ) => {
     return (
         <div
             className='task'
-            style={completed ? {borderLeft: '6px solid chartreuse', opacity: '0.5'} : {}}
+            style={completed ? {borderLeft: '6px solid #0077ff', opacity: '0.5'} : {}}
         >
             <p>
                 {title}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import ListaDeTask from './components/ListaDeTask';
 import AdicionarTask from './components/AdicionarTask';
+import Rodape from './components/Rodape';
 
 function App() {
 
@@ -26,14 +27,14 @@ function App() {
 			if (el.id === taskId) {
 				return {...el, completed: !el.completed}
 			}
-			
+
 			return el
 		});
 
 		setTask(newTaskCompleted);
 	};
 
-	// Função que configura
+	// Função que configura o estado da lista renderizada ao adicionar uma nova tarefa com base no título que é passado ao input
 	const handleTaskAddition = (taskTitle) => {
 
 		setTask((prev) => {
@@ -56,6 +57,7 @@ function App() {
 		});
 	};
 
+	// Função que filtra o estado da lista renderizada ao retornar somente os objetos que possuem um 'id' diferente do 'id' da tarefa que chamou essa função
 	const handleTaskDelete = (taskId) => {
 		const newTaskNoRemoved = task.filter((el) => {
 			return el.id !== taskId
@@ -65,7 +67,7 @@ function App() {
 	};
 
 	return (
-		<main className='container'>
+		<main className='App'>
 			<AdicionarTask 
 				handleTaskAddition={handleTaskAddition} 
 			/>
@@ -74,6 +76,7 @@ function App() {
 				completarTarefa={handleTaskClick}
 				apagarTarefa={handleTaskDelete}
 			/>
+			<Rodape />
 		</main>
 	)
 }

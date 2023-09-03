@@ -4,9 +4,9 @@ import './ListaDeTask.css';
 const ListaDeTask = ( {criaTasks, completarTarefa, apagarTarefa} ) => {
 
     return (
-        <section>
+        <section className='listaDeTask'>
             {criaTasks.map((obj) => {
-                return <Task descricao={obj} completarTarefa={completarTarefa} apagarTarefa={apagarTarefa}/>
+                return <Task descricao={obj} completarTarefa={completarTarefa} apagarTarefa={apagarTarefa} key={obj.id}/>
             })}
         </section>
     )
