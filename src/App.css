@@ -1,8 +1,15 @@
 .App {
     height: 100vh;
     position: relative;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 2px solid chartreuse;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Work Sans', sans-serif;
 }

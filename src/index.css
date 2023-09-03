@@ -5,6 +5,5 @@
 }
 
 body {
-  height: 100vh;
-  background-image: linear-gradient(170deg, rgb(115, 142, 153), rgb(29, 61, 97));
+  background-color: #222;
 }
